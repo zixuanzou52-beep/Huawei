@@ -36,7 +36,6 @@ The model does not receive `expected_state`, `expected_outcome`, `fault_injectio
 - Fault or policy task: an appropriate safety/failure interception must be observed. Without Monitor, a limited safe-stop recovery path is supported.
 - All other cases, including saying "done" without reaching the expected state, receive a reward of `0`.
 
-The full home dataset contains 515 tasks across `routine`, `conditional`, `confirmation`, and `fault` categories. See [项目交接文档.md](项目交接文档.md) for the detailed data contract, historical results, and known issues.
 
 ## Repository Layout
 
@@ -121,7 +120,7 @@ Run the home environment and Planner/Repair test suites:
 ```sh
 cd /home/zouzixuan/code-mm/Huawei
 
-python3 -m unittest \
+python -m unittest \
   tau_bench.envs.home.test_home_env \
   tau_bench.agents.test_planner_repair_agent
 ```
