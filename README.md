@@ -17,7 +17,6 @@ User instruction -> Planner -> Monitor -> Executor -> Home environment
                                        v
                                    Verifier
 ```
-111
 - `Planner`: Uses an LLM to turn an instruction, public state, and tool schemas into a JSON action plan.
 - `Repair`: Replans after observable execution failures, invalid plans, or parameter errors.
 - `Executor`: Deterministically dispatches planned tool calls in order.
